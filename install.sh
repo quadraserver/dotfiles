@@ -1,6 +1,6 @@
 #!/bin/bash
-source .install/version.sh
-source .install/colors.sh
+source install/version.sh
+source install/colors.sh
 clear
 
 # Set installation mode
@@ -26,40 +26,40 @@ echo "Version: $version"
 echo ""
 echo "This script will guide you through the installation process of the dotfiles."
 echo ""
-source .install/library.sh
-source .install/required.sh
-source .install/confirm-start.sh
-source .install/backup.sh
-source .install/preparation.sh
-source .install/profile.sh
-source .install/yay.sh
+source install/library.sh
+source install/required.sh
+source install/confirm-start.sh
+source install/backup.sh
+source install/preparation.sh
+source install/profile.sh
+source install/yay.sh
 if [[ $profile == *"Hyprland"* ]]; then
-    source .install/hyprland.sh
-    source .install/hyprland-packages.sh
-    source .install/install-packages.sh
+    source install/hyprland.sh
+    source install/hyprland-packages.sh
+    source install/install-packages.sh
 fi
 if [[ $profile == *"Qtile"* ]]; then
-    source .install/qtile.sh
-    source .install/qtile-packages.sh
-    source .install/install-packages.sh
+    source install/qtile.sh
+    source install/qtile-packages.sh
+    source install/install-packages.sh
 fi
-source .install/pywal.sh
-source .install/wallpaper.sh
-source .install/disabledm.sh
-source .install/issue.sh
-source .install/restore.sh
-source .install/vm.sh
-source .install/keyboard.sh
-source .install/hook.sh
-source .install/copy.sh
-source .install/config-folder.sh
-source .install/init-pywal.sh
+source install/pywal.sh
+source install/wallpaper.sh
+source install/disabledm.sh
+source install/issue.sh
+source install/restore.sh
+source install/vm.sh
+source install/keyboard.sh
+source install/hook.sh
+source install/copy.sh
+source install/config-folder.sh
+source install/init-pywal.sh
 if [[ $profile == *"Hyprland"* ]]; then
-    source .install/hyprland-dotfiles.sh
+    source install/hyprland-dotfiles.sh
 fi
 if [[ $profile == *"Qtile"* ]]; then
-    source .install/qtile-dotfiles.sh
+    source install/qtile-dotfiles.sh
 fi
-source .install/bashrc.sh
-source .install/monitor.sh
-source .install/done.sh
+source install/bashrc.sh
+source install/monitor.sh
+source install/done.sh
