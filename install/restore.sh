@@ -15,9 +15,9 @@ _showRestoreOptions() {
         restorelist+="~/dotfiles/.bashrc "
         selectedlist+="~/dotfiles/.bashrc,"
     fi
-    if [ -d ~/dotfiles/.settings ]; then
-        restorelist+="~/dotfiles/.settings "
-        selectedlist+="~/dotfiles/.settings,"
+    if [ -d ~/dotfiles/settings ]; then
+        restorelist+="~/dotfiles/settings "
+        selectedlist+="~/dotfiles/settings,"
     fi
     if [[ $profile == *"Hyprland"* ]]; then
         if [ -f ~/dotfiles/hypr/conf/custom.conf ]; then
@@ -106,10 +106,10 @@ _startRestore() {
             echo ".bashrc restored!"
         fi
     fi
-    if [[ $restoreselect == *"~/dotfiles/.settings"* ]] || [[ $restoreselect == *"All"* ]] ; then
-        if [ -d ~/dotfiles/.settings ]; then
-            rsync -a -I ~/dotfiles/.settings/ ~/dotfiles-versions/$version/.settings/
-            echo ".settings restored!"
+    if [[ $restoreselect == *"~/dotfiles/settings"* ]] || [[ $restoreselect == *"All"* ]] ; then
+        if [ -d ~/dotfiles/settings ]; then
+            rsync -a -I ~/dotfiles/settings/ ~/dotfiles-versions/$version/settings/
+            echo "settings restored!"
         fi
     fi
     if [[ $profile == *"Hyprland"* ]]; then
