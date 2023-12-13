@@ -1,6 +1,6 @@
 #!/bin/bash
-source .install/version.sh
-source .install/colors.sh
+source install/version.sh
+source install/colors.sh
 clear
 
 # Set installation mode
